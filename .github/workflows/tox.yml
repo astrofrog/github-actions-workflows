@@ -81,7 +81,7 @@ jobs:
       - run: python -m pip install PyYAML click
       - id: set-outputs
         run: |
-          python tox_matrix.py --envs "${{ inputs.envs }}" --libraries "${{ inputs.libraries }}" \
+          python .github/workflows/tox_matrix.py --envs "${{ inputs.envs }}" --libraries "${{ inputs.libraries }}" \
           --posargs "${{ inputs.posargs }}" --toxdeps "${{ inputs.toxdeps }}" \
           --toxargs "${{ inputs.toxargs }}" --pytest "${{ inputs.pytest }}" \
           --coverage "${{ inputs.coverage }}" --conda "${{ inputs.conda }}" \
