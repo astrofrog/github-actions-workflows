@@ -185,9 +185,9 @@ jobs:
 
       - name: Setup conda
         if: ${{ matrix.conda == 'true' }}
-        uses: s-weigand/setup-conda@v1
+        uses: conda-incubator/setup-miniconda
         with:
-          update-conda: true
+          auto-update-conda: true
           python-version: ${{ matrix.python_version }}
 
       - id: set-env
