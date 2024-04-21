@@ -189,6 +189,7 @@ jobs:
         with:
           auto-update-conda: true
           python-version: ${{ matrix.python_version }}
+          activate-environment: test
 
       - id: set-env
         if: ${{ matrix.setenv != '' }}
