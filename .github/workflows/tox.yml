@@ -179,13 +179,6 @@ jobs:
           apt: ${{ matrix.libraries_apt }}
           choco: ${{ matrix.libraries_choco }}
 
-      - name: Setup Python ${{ matrix.python_version }}
-        if: ${{ matrix.conda != 'true' }}
-        uses: actions/setup-python@8d9ed9ac5c53483de85588cdf95a591a75ab9f55  # v5.5.0
-        with:
-          python-version: ${{ matrix.python_version }}
-          allow-prereleases: true
-
       - name: Setup conda
         if: ${{ matrix.conda == 'true' }}
         uses: mamba-org/setup-micromamba@0dea6379afdaffa5d528b3d1dabc45da37f443fc  # v2.0.4
